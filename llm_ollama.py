@@ -6,19 +6,8 @@ class GPT_OLLAMA:
         pass
 
     def talk(self, prompt, model="deepseek-v2:latest"):
-        """对话。
 
-        Args:
-            prompt (str): 用户输入。
-            model (str): 模型，默认为 gpt-3.5-turbo。
-        
-        Returns:
-            str: 模型回复。
-        """
-        if prompt == "exit" or len(prompt) > 80 :
-            print(len(prompt))
-            return "empty"
-        
+        #client = ollama.Client(host='http://ollama.joemeet.com')
         response: ChatResponse = chat(model, messages=[
             {"role": "system", "content": "你是一个善解人意且学识渊博的好朋友"},
             {'role': 'user','content': prompt},
