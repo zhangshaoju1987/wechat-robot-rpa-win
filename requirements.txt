@@ -1,6 +1,8 @@
 uiautomation
+pywinauto
 Pillow
 pywin32
 psutil
 pyperclip
 ollama
+
